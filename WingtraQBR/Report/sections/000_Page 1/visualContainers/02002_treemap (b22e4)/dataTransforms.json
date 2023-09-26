@@ -1,0 +1,99 @@
+{
+  "projectionOrdering": {
+    "Values": [
+      0
+    ],
+    "Group": [
+      1
+    ]
+  },
+  "projectionActiveItems": {
+    "Group": [
+      {
+        "queryRef": "Sheet4.Project Name",
+        "suppressConcat": false
+      }
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Sum of Amount",
+        "Name": "Sum(Sheet4.Amount)",
+        "Type": 1
+      },
+      {
+        "Restatement": "Project Name",
+        "Name": "Sheet4.Project Name",
+        "Type": 2048
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Group",
+          "Projection": 1,
+          "isActive": true
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Sum of Amount",
+      "queryName": "Sum(Sheet4.Amount)",
+      "roles": {
+        "Values": true
+      },
+      "sort": 2,
+      "sortOrder": 0,
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Sheet4"
+                }
+              },
+              "Property": "Amount"
+            }
+          },
+          "Function": 0
+        }
+      }
+    },
+    {
+      "displayName": "Project Name",
+      "queryName": "Sheet4.Project Name",
+      "roles": {
+        "Group": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Sheet4"
+            }
+          },
+          "Property": "Project Name"
+        }
+      }
+    }
+  ]
+}

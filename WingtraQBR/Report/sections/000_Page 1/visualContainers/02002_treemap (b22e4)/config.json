@@ -1,0 +1,75 @@
+{
+  "name": "b22e4e43592631972d0e",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 0,
+        "y": 349,
+        "width": 435,
+        "height": 339,
+        "z": 2002,
+        "tabOrder": 2002
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "treemap",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Sum(Sheet4.Amount)"
+        }
+      ],
+      "Group": [
+        {
+          "queryRef": "Sheet4.Project Name",
+          "active": true
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "s",
+          "Entity": "Sheet4",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "Amount"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(Sheet4.Amount)",
+          "NativeReferenceName": "Sum of Amount"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Project Name"
+          },
+          "Name": "Sheet4.Project Name",
+          "NativeReferenceName": "Project Name"
+        }
+      ]
+    },
+    "autoSelectVisualType": false,
+    "drillFilterOtherVisuals": true
+  }
+}
